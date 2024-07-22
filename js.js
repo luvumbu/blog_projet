@@ -67,4 +67,13 @@ return document.getElementById(this.id).title;
  
 // var monAtribute = new Atribute("test");
 // monAtribute.exe_atribute("class","red");
- 
+
+
+function reload_page(time){
+	const myTimeout = setTimeout(myGreeting, time);
+		function myGreeting() {
+		location.reload() ; 
+		}
+
+}
+

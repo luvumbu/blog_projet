@@ -34,7 +34,7 @@ class DatabaseHandler {
                 if ($conn->query($sql) === TRUE) {
              
                 } else {
-           //     echo "Error creating database: " . $conn->error;
+            //  echo "Error creating database: " . $conn->error;
                 }
 
                 $conn->close();
