@@ -13,10 +13,8 @@ session_start() ;
 <body>
     <link rel="stylesheet" href="css.css">
 <script src="js.js"></script>
-
-
-    <?php 
-
+<div id="form_sql_php_info"></div>
+<?php 
 $filename = 'class/config.php';  
 $verif_data = 0 ;
 // recherche de lelement 
@@ -24,29 +22,11 @@ require_once 'class/filename.php' ;
 require_once 'class/databaseHandler.php' ; 
 require_once 'class/verif_filename.php' ; 
 // toute cette partie ferifie le bon fonctionnement de l'application class/verif_filename.php
-
-
-
-
-
-
-
-
-
-if(isset($_SESSION["nom_user"] )) {
-
-
+ if(isset($_SESSION["nom_user"] )) {
     require_once "login.php" ; 
-?>
-
-
-
-
-<?php 
-    
-    }
+}
     else {
-        require_once 'form_data.php' ; 
+        require_once 'select/form_data.php' ; 
     }
 
 
@@ -59,9 +39,6 @@ if(isset($_SESSION["nom_user"] )) {
        </script>
             <?php 
     }
-
-
-
 
 // si la   $verif_data == 0 le fichier config est bon si non 
 // si non demande de se connecter à fin de creer le fichier de configuration
@@ -78,14 +55,13 @@ if(isset($_SESSION["nom_user"] )) {
 </script>
 
 
-
-<?php 
-
-
-
-
-
-?>
+ <style>
+        #form_sql_php_info{
+        text-align: center;
+  
+        margin-top:25px; 
+    }
+ </style>
  
 </body>
 </html>

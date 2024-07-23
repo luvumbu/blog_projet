@@ -46,9 +46,12 @@
                   console.log(ok.info()); // demande l'information dans le tableau
                  ok.push(); // envoie l'information au code pkp 
 
+                 Ajax("form_sql_php_info","req/form_sql_php_info.php");
 
 
 
-                 reload_page(250) ; 
+
+
+
         }
 </script>
