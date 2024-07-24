@@ -43,26 +43,27 @@ if($databaseHandler->verif==1){
 
 
     $databaseHandler->set_column_names("id_user");
-    $databaseHandler->set_column_names("nom_user");
+    $databaseHandler->set_column_names("id_parent_user");
     $databaseHandler->set_column_names("description_user");
     $databaseHandler->set_column_names("img_user");
 
 
+
+    $databaseHandler->set_column_names("nom_user");
     $databaseHandler->set_column_names("prenom_user");
     $databaseHandler->set_column_names("password_user");
     $databaseHandler->set_column_names("email_user");
     $databaseHandler->set_column_names("date_inscription_user");
-
-
-
     $databaseHandler->set_column_types("INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY");
     $databaseHandler->set_column_types("VARCHAR(500) NOT NULL");
     $databaseHandler->set_column_types("VARCHAR(500) NOT NULL");
-    $databaseHandler->set_column_types("VARCHAR(500) NOT NULL");
-
 
     $databaseHandler->set_column_types("VARCHAR(500) NOT NULL");
     $databaseHandler->set_column_types("VARCHAR(500) NOT NULL");
+    $databaseHandler->set_column_types("VARCHAR(500) NOT NULL");
+    $databaseHandler->set_column_types("VARCHAR(500) NOT NULL");
+
+
     $databaseHandler->set_column_types("VARCHAR(500) NOT NULL");
     $databaseHandler->set_column_types("TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP");
     $databaseHandler->add_table($config_dbname);
