@@ -23,7 +23,7 @@ require_once 'class/databaseHandler.php' ;
 require_once 'class/verif_filename.php' ; 
 // toute cette partie ferifie le bon fonctionnement de l'application class/verif_filename.php
  if(isset($_SESSION["nom_user"] )) {
-    require_once "login.php" ; 
+    require_once "select/login.php" ; 
 }
     else {
         require_once 'select/form_data.php' ; 
