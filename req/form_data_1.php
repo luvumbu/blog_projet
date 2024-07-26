@@ -43,6 +43,8 @@ if($databaseHandler->verif==1){
 
 
     $databaseHandler->set_column_names("id_user");
+    $databaseHandler->set_column_names("id_sha1_user");
+
     $databaseHandler->set_column_names("id_parent_user");
     $databaseHandler->set_column_names("description_user");
     $databaseHandler->set_column_names("title_user");
@@ -63,6 +65,8 @@ if($databaseHandler->verif==1){
 
     $databaseHandler->set_column_types("VARCHAR(500) NOT NULL");
     $databaseHandler->set_column_types("VARCHAR(500) NOT NULL");
+
+    $databaseHandler->set_column_types("VARCHAR(500) NOT NULL");
     $databaseHandler->set_column_types("VARCHAR(500) NOT NULL");
     $databaseHandler->set_column_types("VARCHAR(500) NOT NULL");
     $databaseHandler->set_column_types("VARCHAR(500) NOT NULL");
@@ -78,25 +82,14 @@ if($databaseHandler->verif==1){
 
 
 
-
-
-
-
-
-
-
-
-
-
- 
-
     $databaseHandler = new DatabaseHandler($config_dbname, $config_password); 
 
 
-
-
-
     $databaseHandler->set_column_names("id_projet");
+    $databaseHandler->set_column_names("id_user_projet");
+
+    $databaseHandler->set_column_names("id_sha1_projet");
+
     $databaseHandler->set_column_names("name_projet"); 
     $databaseHandler->set_column_names("title_projet"); 
     $databaseHandler->set_column_names("description_projet"); 
@@ -116,6 +109,10 @@ if($databaseHandler->verif==1){
  
     $databaseHandler->set_column_types("VARCHAR(500) NOT NULL");
     $databaseHandler->set_column_types("VARCHAR(500) NOT NULL");
+    $databaseHandler->set_column_types("VARCHAR(500) NOT NULL");
+    $databaseHandler->set_column_types("VARCHAR(500) NOT NULL");
+
+
 
     $databaseHandler->set_column_types("VARCHAR(500) NOT NULL");
 
