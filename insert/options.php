@@ -13,8 +13,10 @@ $_SESSION["options"] = time() ;
 $t = time() ;
 
 
-require_once '../class/databaseHandler.php' ; 
-$databaseHandler = new DatabaseHandler("root", "root");
+require_once '../class/databaseHandler.php' ;
+require_once '../class/config.php' ; 
+
+$databaseHandler = new DatabaseHandler($config_dbname, $config_password);
 $databaseHandler->action_sql("INSERT INTO `projet` (id_sha1_projet,id_user_projet) VALUES ('$t','$id_user')") ;
 
 ?>

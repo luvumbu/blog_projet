@@ -59,24 +59,28 @@ for ($a = 0; $a < $somme; $a++) {
 
 
   <div class="card">
-    <h2><input type="text" onkeyup="left_action(this)" title="<?php  echo $id_projet[$a] ?>" id="<?php echo $id_projet[$a] . "_name_projet" ?>" title="name_projet" placeholder="TITLE HEADING" value="<?php echo  $name_projet[$a] ?>"></h2>
+    <h2><input type="text" onkeyup="left_action(this)" title="<?php echo $id_projet[$a] ?>" id="<?php echo $id_projet[$a] . "_name_projet" ?>" title="name_projet" placeholder="TITLE HEADING" value="<?php echo  $name_projet[$a] ?>"></h2>
 
-    <textarea name="" onkeyup="left_action(this)" title="<?php  echo $id_projet[$a] ?>" id="<?php echo $id_projet[$a] . "_title_projet" ?>" placeholder="Title description, Dec 7, 2017"><?php echo  $title_projet[$a] ?></textarea>
+    <textarea name="" onkeyup="left_action(this)" title="<?php echo $id_projet[$a] ?>" id="<?php echo $id_projet[$a] . "_title_projet" ?>" placeholder="Title description, Dec 7, 2017"><?php echo  $title_projet[$a] ?></textarea>
 
 
 
 
     <div class="display_flex_1">
-      <div class="display_none" onclick="display_none(this)" title="<?php echo $id_projet[$a] ?>" id="<?php echo "display_none_".$id_projet[$a] ?>">
+      <div class="display_none" onclick="display_none(this)" title="<?php echo $id_projet[$a] ?>" id="<?php echo "display_none_" . $id_projet[$a] ?>">
         <img width="50" height="50" src="https://img.icons8.com/color/50/delete-forever.png" alt="delete-forever" />
       </div>
       <div onclick="left_opntion(this)" class="left_option" title="<?php echo  $id_projet[$a] ?>">
         <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/delete-forever.png" alt="delete-forever" />
 
       </div>
-      <div onclick="left_opntion(this)" class="left_option" title="<?php echo  $id_projet[$a] ?>">
-        <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/settings.png" alt="settings" />
-      </div>
+
+      <a href="<?php echo 'blog.php/'.$id_projet[$a] ?>">
+        <div class="left_option" title="<?php echo  $id_projet[$a] ?>">
+          <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/settings.png" alt="settings" />
+        </div>
+      </a>
+
 
     </div>
 
@@ -87,7 +91,7 @@ for ($a = 0; $a < $somme; $a++) {
 
 
 
-
+  /*
   $id_sha1_projet_a = $id_sha1_projet[$a];
 
 
@@ -105,6 +109,9 @@ for ($a = 0; $a < $somme; $a++) {
     //echo 'info !!'.$x ."<br/>" ; 
 
   }
+
+
+  */
 }
 /*
 if(isset($_SESSION["options"])){
@@ -132,9 +139,11 @@ if(isset($_SESSION["options"])){
 
     min-width: 100%;
   }
-.display_none{
-  display: none ; 
-}
+
+  .display_none {
+    display: none;
+  }
+
   .left_option:hover {
     cursor: pointer;
   }
@@ -164,7 +173,8 @@ if(isset($_SESSION["options"])){
     margin-bottom: 25px;
 
   }
-  .cursor_pointer:hover{
+
+  .cursor_pointer:hover {
     cursor: pointer;
   }
 </style>
@@ -178,27 +188,27 @@ if(isset($_SESSION["options"])){
 
 
 <script>
-  function left_opntion(_this){
-    console.log(_this.title) ; 
+  function left_opntion(_this) {
+    console.log(_this.title);
 
-    document.getElementById("display_none_"+_this.title).className ="cursor_pointer" ; 
-    _this.style.display="none" ; 
+    document.getElementById("display_none_" + _this.title).className = "cursor_pointer";
+    _this.style.display = "none";
   }
 
 
 
-  var envoyer = true ; 
+  var envoyer = true;
 
-var left_names = 
-[
+  var left_names = [
     'name_projet',
     'title_projet',
     'description_projet'
-] ; 
-    function left_action(_this){
-  
+  ];
 
-      /*
+  function left_action(_this) {
+
+
+    /*
   var xa = "" ; 
   var xb = "" ; 
 var x_verif = false ; 
@@ -230,7 +240,6 @@ var x_verif = false ;
 
  
 */
- 
 
 
 
@@ -242,86 +251,87 @@ var x_verif = false ;
 
 
 
-  const myTimeout_1 = setTimeout(myGreeting, 100);
+
+    const myTimeout_1 = setTimeout(myGreeting, 100);
 
 
-function myGreeting() {
-
- 
-
-
-
-
-  if(envoyer){
-
-  const myTimeout_2 = setTimeout(myGreeting_2, 1000);
-}
-
-
-envoyer = false ; 
- 
-}
-
-function myGreeting_2(){
-
-    
-  envoyer = true ;  
-  
-  
-
-  var _title_projet = document.getElementById(_this.title+"_title_projet").value  ; 
-  var _name_projet = document.getElementById(_this.title+"_name_projet").value  ; 
-        
-
-  console.log(_title_projet) ; 
-  console.log(_name_projet) ; 
-
- 
- 
-
- 
-   
-    var ok = new Information("update/left_update.php"); // création de la classe 
-
-ok.add("id_projet", _this.title); // ajout de l'information pour lenvoi 
-
-ok.add("title_projet", _title_projet); // ajout de l'information pour lenvoi 
-ok.add("name_projet", _name_projet); // ajout de l'information pour lenvoi 
- 
- 
-console.log(ok.info()); // demande l'information dans le tableau
-ok.push(); // envoie l'information au code pkp 
- 
-}
+    function myGreeting() {
 
 
 
+
+
+
+      if (envoyer) {
+
+        const myTimeout_2 = setTimeout(myGreeting_2, 1000);
+      }
+
+
+      envoyer = false;
 
     }
 
-    function display_none(_this) {
-      envoyer = true ;  
+    function myGreeting_2() {
+
+
+      envoyer = true;
+
+
+
+      var _title_projet = document.getElementById(_this.title + "_title_projet").value;
+      var _name_projet = document.getElementById(_this.title + "_name_projet").value;
+
+
+      console.log(_title_projet);
+      console.log(_name_projet);
+
+
+
+
+
+
+      var ok = new Information("update/left_update.php"); // création de la classe 
+
+      ok.add("id_projet", _this.title); // ajout de l'information pour lenvoi 
+
+      ok.add("title_projet", _title_projet); // ajout de l'information pour lenvoi 
+      ok.add("name_projet", _name_projet); // ajout de l'information pour lenvoi 
+
+
+      console.log(ok.info()); // demande l'information dans le tableau
+      ok.push(); // envoie l'information au code pkp 
+
+    }
+
+
+
+
+  }
+
+  function display_none(_this) {
+    envoyer = true;
     var ok = new Information("update/display_none.php"); // création de la classe 
 
-ok.add("id_projet", _this.title); // ajout de l'information pour lenvoi 
- 
-
-
-console.log(ok.info()); // demande l'information dans le tableau
-ok.push(); // envoie l'information au code pkp 
+    ok.add("id_projet", _this.title); // ajout de l'information pour lenvoi 
 
 
 
-const myTimeout = setTimeout(relod, 300);
-
-function relod() {
- location.reload() ; 
-}
+    console.log(ok.info()); // demande l'information dans le tableau
+    ok.push(); // envoie l'information au code pkp 
 
 
 
+    const myTimeout = setTimeout(relod, 300);
 
-
-
+    function relod() {
+      location.reload();
     }
+
+
+
+
+
+
+  }
 </script>

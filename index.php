@@ -11,7 +11,7 @@ session_start() ;
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
 </head>
 <body>
-    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="css/css.css">
 <script src="js.js"></script>
 <div id="form_sql_php_info"></div>
 <?php 
@@ -52,7 +52,7 @@ require_once 'class/verif_filename.php' ;
        <?php 
         }
 
-        
+
         ?>
         <script>  
         var form_send = new Atribute("form_send");
