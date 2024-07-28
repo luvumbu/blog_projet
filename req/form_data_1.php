@@ -91,6 +91,8 @@ if($databaseHandler->verif==1){
     $databaseHandler->set_column_names("id_sha1_projet");
 
     $databaseHandler->set_column_names("name_projet"); 
+    $databaseHandler->set_column_names("statue_projet"); 
+
     $databaseHandler->set_column_names("title_projet"); 
     $databaseHandler->set_column_names("description_projet"); 
 
@@ -110,6 +112,8 @@ if($databaseHandler->verif==1){
     $databaseHandler->set_column_types("VARCHAR(500) NOT NULL");
     $databaseHandler->set_column_types("VARCHAR(500) NOT NULL");
     $databaseHandler->set_column_types("VARCHAR(500) NOT NULL");
+    $databaseHandler->set_column_types("VARCHAR(500) NOT NULL");
+
     $databaseHandler->set_column_types("VARCHAR(500) NOT NULL");
 
 

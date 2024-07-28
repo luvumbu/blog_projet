@@ -17,10 +17,7 @@
     </div>
 </div>
 
-
-<div class="header">
-    <h2><input type="text" placeholder="Blog name"></h2>
-</div>
+ 
 
 <div class="row">
     <div class="leftcolumn">
@@ -109,5 +106,13 @@ echo "<br/>" ;
 
         console.log(ok.info()); // demande l'information dans le tableau
         ok.push(); // envoie l'information au code pkp 
+
+
+        const myTimeout = setTimeout(relod, 300);
+
+function relod() {
+ location.reload() ; 
+}
+
     }
 </script>
