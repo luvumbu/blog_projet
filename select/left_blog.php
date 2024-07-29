@@ -397,7 +397,7 @@ if(isset($_SESSION["options"])){
 
 
 
-        const myTimeout = setTimeout(relod, 300);
+        const myTimeout = setTimeout(relod, 150);
 
         function relod() {
             location.reload();
@@ -433,5 +433,23 @@ if(isset($_SESSION["options"])){
 
 
 
+        const myTimeout = setTimeout(myGreeting, 300);
+
+function myGreeting() {
+   location.reload() ; 
+}
+
+
+
     }
 </script>
+
+
+<style>
+    h1,h2,h3,h4,p{
+        padding-top: 25px;
+        padding-left: 25px;
+        padding-bottom: 45px;
+
+    }
+</style>

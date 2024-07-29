@@ -108,17 +108,16 @@
 
 
 
-                 <div style="margin-top:20px">
+                 <div class="remove_">
                      <div>
-                         <img width="50" height="50" src="https://img.icons8.com/ios/50/image-file.png" alt="image-file" />
-
+                         <img onclick="remove_(this)" title="<?php echo $id_projet_child[$x]  ?>" width="25" height="25" src="https://img.icons8.com/ios-filled/25/delete-forever.png" alt="delete-forever" />
+                         <img onclick="remove_projet_child(this)" title="<?php echo $id_projet_child[$x]  ?>" class="display_none" id="<?php echo $id_projet_child[$x] . "_remove"  ?>" width="25" height="25" src="https://img.icons8.com/color/25/delete-forever.png" alt="delete-forever" />
                      </div>
-                     <img width="25" height="25" src="https://img.icons8.com/color/25/delete-forever.png" alt="delete-forever" />
                  </div>
 
 
 
- <?php
+             <?php
 
 
                 } else {
@@ -135,8 +134,14 @@
 
 
                 break;
-            case "green":
-                echo "Your favorite color is green!";
+            case "img":
+                ?>
+             <div class="div_img">
+                 <img class="cursor_pointer" src="https://img.freepik.com/photos-gratuite/jeux-olympiques-paris-2024-illustration-concept-image-generee-par-ia_268835-6125.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1722124800&semt=sph" alt="" srcset="">
+<input type="text"   placeholder="ALT IMG ICI">
+             </div>
+
+ <?php
                 break;
         }
     }
@@ -156,6 +161,14 @@
      .blanc {
          background-color: white;
      }
+     .div_img{
+        width: 80%;
+        margin: auto;
+     }
+     .div_img img{
+        width: 100%;
+     }
+
  </style>
 
  <script>
@@ -243,4 +256,45 @@
 
 
      }
+
+     function remove_(_this) {
+         _this.style.display = "none";
+         console.log(_this.title);
+         document.getElementById(_this.title + "_remove").className = "";
+     }
+
+
+     function remove_projet_child(_this) {
+         console.log(_this.title);
+
+
+
+         var ok = new Information("../remove/remove_projet_child.php"); // création de la classe 
+
+         ok.add("id_projet_child", _this.title); // ajout de l'information pour lenvoi 
+
+         console.log(ok.info()); // demande l'information dans le tableau
+         ok.push(); // envoie l'information au code pkp 
+
+
+
+         const myTimeout = setTimeout(myGreeting, 150);
+
+         function myGreeting() {
+             location.reload();
+         }
+
+     }
  </script>
+
+ <style>
+     .remove_ {
+         margin-left: 25px;
+         margin-top: 25px;
+
+     }
+
+     .remove_ img:hover {
+         cursor: pointer;
+     }
+ </style>
