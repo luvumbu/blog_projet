@@ -78,9 +78,8 @@
 
 
                  <div style="margin-top:20px;padding:25px" class="margin_styl_1">
-
-                     <input value="<?php echo $name_projet_child[$x] ?>" onkeyup="left_projet_child(this)" title="<?php echo  $id_projet_child[$x] ?>" id="<?php echo   $id_projet_child[$x] . "_name_projet" ?>" type="text" style="border-bottom:1px solid black;width:80%">
-
+ 
+<textarea  onkeyup="left_projet_child(this)" title="<?php echo  $id_projet_child[$x] ?>" id="<?php echo   $id_projet_child[$x] . "_name_projet" ?>" type="text" style="border-bottom:1px solid black;width:80%"><?php echo $name_projet_child[$x] ?></textarea>
                      <select title="<?php echo  $id_projet_child[$x] ?>" class="form-select" aria-label="Default select example" onchange="statue_projet_child(this)">
 
                          <option value="<?php echo $statue_projet_child[$x] ?>" selected><?php echo $statue_projet_child[$x] ?></option>
@@ -145,18 +144,9 @@
                         ?>
 
                         <div class="div_img">
-                            <img src="<?php echo '../src_/' . $img_projet_child_src[$x] ?>" class="<?php echo $id_projet[$a] ?>" onclick="add_img_child(this)" title="<?php echo $id_projet_child[$x]  ?>"    srcset="">
-                             <input type="text"  class='alt_class'  title="<?php echo  'alt_img'.$title_projet_child[$x] ?>" onkeyup="alt_img(this)" placeholder="ALT IMG ICI">
-              
-                     <div>
-                         <img style="width: 50px;" onclick="remove_(this)" title="<?php echo $id_projet_child[$x]  ?>" width="25" height="25" src="https://img.icons8.com/ios-filled/25/delete-forever.png" alt="delete-forever" />
-                         <img style="width: 50px;" onclick="remove_projet_child(this)" title="<?php echo $id_projet_child[$x]  ?>" class="display_none" id="<?php echo $id_projet_child[$x] . "_remove"  ?>" width="25" height="25" src="https://img.icons8.com/color/25/delete-forever.png" alt="delete-forever" />
-                     </div>
-                 </div>
-
-
-
-                        
+                            <img src="<?php echo '../src_/' . $img_projet_child_src[$x] ?>" class="<?php echo $id_projet[$a] ?>" onclick="add_img_child(this)" title="<?php echo $id_projet_child[$x]  ?>"  alt="" srcset="">
+                             <input type="text"  class='alt_class'    value="<?php echo  $title_projet_child[$x]?>"   title="<?php echo  $id_projet_child[$x]?>" id="<?php echo  'alt_img'.$id_projet_child[$x]?>" onkeyup="alt_img(this)" placeholder="ALT IMG ICI">
+                        </div>
                     <?php
 
                     }
@@ -238,6 +228,19 @@
         margin-bottom:50px;
 
      }
+     textarea {
+        width: 100%;
+
+    
+    height:70px ; 
+
+        margin-top: 20px;
+        margin-bottom: 20px;
+border: 1px solid rgba(0, 0, 0, 0);
+border-bottom: 3px solid #584e80;
+
+
+    }
  </style>
 
  <script>
@@ -382,6 +385,75 @@
 
 
      }
+
+     function alt_img(_this) {
+
+
+
+
+
+ 
+
+
+ 
+         const myTimeout_1 = setTimeout(myGreeting, 100);
+
+
+         function myGreeting() {
+
+
+
+
+
+
+             if (envoyer) {
+
+                 const myTimeout_2 = setTimeout(myGreeting_2, 1000);
+             }
+
+
+             envoyer = false;
+
+         }
+
+         function myGreeting_2() {
+
+
+             envoyer = true;
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+             var ok = new Information("../update/alt_img.php"); // création de la classe 
+
+             ok.add("id_projet_child", _this.title); // ajout de l'information pour lenvoi 
+             ok.add("title_projet_child", _this.value); // ajout de l'information pour lenvoi 
+
+
+        
+             
+
+
+             console.log(ok.info()); // demande l'information dans le tableau
+             ok.push(); // envoie l'information au code pkp 
+ 
+
+         }
+
+
+
+
+
+     }
  </script>
 
  <style>
@@ -394,4 +466,55 @@
      .remove_ img:hover {
          cursor: pointer;
      }
+     .optiones{
+        background-color: white;
+        padding: 20px;
+     }
+     p {
+        text-align: justify;
+     }
+     h1,h2,h3,h4{
+        text-align: center;
+     }
  </style>
+
+<div class="display_flex_1 optiones" >
+                <div class="display_none" onclick="display_none(this)" title="<?php echo $id_projet[$a] ?>" id="<?php echo "display_none_" . $id_projet[$a] ?>">
+                    <img width="50" height="50" src="https://img.icons8.com/color/50/delete-forever.png" alt="delete-forever" />
+                </div>
+                <div onclick="left_opntion(this)" class="left_option" title="<?php echo  $id_projet[$a] ?>">
+                    <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/delete-forever.png" alt="delete-forever" />
+
+                </div>
+                <div class="display_block" onclick="display_block(this)" title="<?php echo $id_projet[$a] ?>" id="<?php echo "display_block_" . $id_projet[$a] ?>">
+                    <img width="50" height="50" src="https://img.icons8.com/ios/50/plus--v1.png" alt="plus--v1" />
+                </div>
+            </div>
+
+            
+            <?php 
+
+if ($id_user==$id_user_projet[$a]) {
+
+    ?>
+
+        <div style="background-color: white;" class="display_none" id="<?php echo "display_block_x_" . $id_projet[$a] ?>">
+
+            <div title="<?php echo $id_projet[$a] ?>" class="<?php echo 'h1' ?>" onclick="options_child(this)">
+                <img class="cursoir_pointer" width="25" height="25" src="https://img.icons8.com/ios/25/hydrogen.png" alt="hydrogen" />
+            </div>
+
+            <div title="<?php echo $id_projet[$a] ?>" class="<?php echo 'list' ?>" onclick="options_child(this)">
+                <img width="24" height="24" src="https://img.icons8.com/parakeet-line/24/list.png" alt="list" />
+
+            </div>
+            <div title="<?php echo $id_projet[$a] ?>" class="<?php echo 'img' ?>" onclick="options_child(this)">
+                <img class="cursoir_pointer" width="25" height="25" src="https://img.icons8.com/ios/25/image-file.png" alt="image-file" />
+            </div>
+        </div>
+
+    <?php
+
+    }
+
+    ?>

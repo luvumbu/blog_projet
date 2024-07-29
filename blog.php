@@ -14,6 +14,7 @@ require_once 'class/verif_filename.php';
 <script src="../js.js"></script>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
     <style>
 
     </style>
@@ -45,3 +46,5 @@ require_once 'class/verif_filename.php';
 </body>
 
 </html>
+
+ 

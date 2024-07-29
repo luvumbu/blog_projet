@@ -153,18 +153,7 @@ for ($a = 0; $a < $somme; $a++) {
             ?>
 
 
-            <div class="display_flex_1">
-                <div class="display_none" onclick="display_none(this)" title="<?php echo $id_projet[$a] ?>" id="<?php echo "display_none_" . $id_projet[$a] ?>">
-                    <img width="25" height="25" src="https://img.icons8.com/color/25/delete-forever.png" alt="delete-forever" />
-                </div>
-                <div onclick="left_opntion(this)" class="left_option" title="<?php echo  $id_projet[$a] ?>">
-                    <img width="25" height="25" src="https://img.icons8.com/ios-filled/25/delete-forever.png" alt="delete-forever" />
 
-                </div>
-                <div class="display_block" onclick="display_block(this)" title="<?php echo $id_projet[$a] ?>" id="<?php echo "display_block_" . $id_projet[$a] ?>">
-                    <img width="25" height="25" src="https://img.icons8.com/ios/25/plus--v1.png" alt="plus--v1" />
-                </div>
-            </div>
 
 
 
@@ -180,35 +169,8 @@ for ($a = 0; $a < $somme; $a++) {
 
 
 
-
-        <?php
-
-        if ($id_user==$id_user_projet[$a]) {
-
-        ?>
-
-            <div class="display_none" id="<?php echo "display_block_x_" . $id_projet[$a] ?>">
-
-                <div title="<?php echo $id_projet[$a] ?>" class="<?php echo 'h1' ?>" onclick="options_child(this)">
-                    <img class="cursoir_pointer" width="25" height="25" src="https://img.icons8.com/ios/25/hydrogen.png" alt="hydrogen" />
-                </div>
-
-                <div title="<?php echo $id_projet[$a] ?>" class="<?php echo 'list' ?>" onclick="options_child(this)">
-                    <img width="24" height="24" src="https://img.icons8.com/parakeet-line/24/list.png" alt="list" />
-
-                </div>
-                <div title="<?php echo $id_projet[$a] ?>" class="<?php echo 'img' ?>" onclick="options_child(this)">
-                    <img class="cursoir_pointer" width="25" height="25" src="https://img.icons8.com/ios/25/image-file.png" alt="image-file" />
-                </div>
-            </div>
-
-        <?php
-
-        }
-
-        ?>
-
-
+ 
+ 
     </div>
 <?php
 
@@ -268,16 +230,7 @@ if(isset($_SESSION["options"])){
         width: 100%;
     }
 
-    textarea {
-        width: 100%;
 
-        border: 1px solid rgba(0, 0, 0, 0);
-        opacity: 0.3;
-
-        margin-top: 20px;
-        margin-bottom: 20px;
-
-    }
 
     input {
         width: 100%;
