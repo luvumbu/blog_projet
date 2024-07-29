@@ -138,66 +138,17 @@
 
 
                 if ($img_projet_child_src[$x] != "") {
+                ?>
 
+                 <div class="div_img">
+                     <img src="<?php echo '../src_/' . $img_projet_child_src[$x] ?>" class="<?php echo $id_projet[$a] ?>" onclick="add_img_child(this)" title="<?php echo $id_projet_child[$x]  ?>"  alt="" srcset="">
 
-                    if ($id_user == $id_user_projet[$a]) {
-
-                        ?>
-
-                        <div class="div_img">
-                            <img src="<?php echo '../src_/' . $img_projet_child_src[$x] ?>" class="<?php echo $id_projet[$a] ?>" onclick="add_img_child(this)" title="<?php echo $id_projet_child[$x]  ?>"    srcset="">
-                             <input type="text"  class='alt_class'  title="<?php echo  'alt_img'.$title_projet_child[$x] ?>" onkeyup="alt_img(this)" placeholder="ALT IMG ICI">
-              
-                     <div>
-                         <img style="width: 50px;" onclick="remove_(this)" title="<?php echo $id_projet_child[$x]  ?>" width="25" height="25" src="https://img.icons8.com/ios-filled/25/delete-forever.png" alt="delete-forever" />
-                         <img style="width: 50px;" onclick="remove_projet_child(this)" title="<?php echo $id_projet_child[$x]  ?>" class="display_none" id="<?php echo $id_projet_child[$x] . "_remove"  ?>" width="25" height="25" src="https://img.icons8.com/color/25/delete-forever.png" alt="delete-forever" />
-                     </div>
+                     <input type="text" placeholder="ALT IMG ICI">
                  </div>
-
-
-
-                        
-                    <?php
-
-                    }
-                    else{
-                        ?>
-
-                        <div class="div_img">
-                            <img  alt="<?php echo $title_projet_child[$x] ?>" src="<?php echo '../src_/' . $img_projet_child_src[$x] ?>" class="<?php echo $id_projet[$a] ?>"     >
-                        </div>
-                    <?php
-                    }
-  
+             <?php
                 }
                 else {
-
-
-                    if ($id_user == $id_user_projet[$a]) {
-
-                        ?>
-                        <div class="div_img">
-       
-                            <img class="<?php echo $id_projet[$a] ?>" onclick="add_img_child(this)" title="<?php echo $id_projet_child[$x]  ?>" src="https://img.freepik.com/photos-gratuite/jeux-olympiques-paris-2024-illustration-concept-image-generee-par-ia_268835-6125.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1722124800&semt=sph" alt="" srcset="">
-                           
-                            <input type="text"  class='alt_class'  title="<?php echo  'alt_img'.$title_projet_child[$x] ?>" onkeyup="alt_img(this)" placeholder="ALT IMG ICI">
-                           
-                           </div>
-       
-                           <?php 
-                    }
-                    else {
-                        ?>
-                        <div class="div_img">
-       
-                            <img class="<?php echo $id_projet[$a] ?>" onclick="add_img_child(this)" title="<?php echo $id_projet_child[$x]  ?>" src="https://img.freepik.com/photos-gratuite/jeux-olympiques-paris-2024-illustration-concept-image-generee-par-ia_268835-6125.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1722124800&semt=sph" alt="" srcset="">
-                           
-                           
-                           </div>
-       
-                           <?php 
-                    }
-
+                    
                 }
                 ?>
 
@@ -225,18 +176,12 @@
      }
 
      .div_img {
-         width: 60%;
+         width: 80%;
          margin: auto;
      }
 
      .div_img img {
          width: 100%;
-     }
-     .alt_class{
-        padding: 15px;
-        margin-top:50px;
-        margin-bottom:50px;
-
      }
  </style>
 
