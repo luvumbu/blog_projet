@@ -94,14 +94,14 @@
             case "h4":
             case "p":
 
-
+                $name_projet_child[$x] = asciiToString($name_projet_child[$x]);
+                $title_projet_child[$x] = asciiToString($title_projet_child[$x]);
                 if ($id_user == $id_user_projet[$a]) {
 
 
-              
-                    $name_projet_child[$x] = asciiToString($name_projet_child[$x]);
-                    $title_projet_child[$x] = asciiToString($title_projet_child[$x]);
 
+
+              
 
 
     ?>
@@ -503,6 +503,7 @@ border-bottom: 3px solid #584e80;
      }
      p {
         text-align: justify;
+        padding: 10px;
      }
      h1,h2,h3,h4{
         text-align: center;
