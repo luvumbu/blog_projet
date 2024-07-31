@@ -60,20 +60,20 @@ if($databaseHandler->verif==1){
 
     $databaseHandler->set_column_names("date_inscription_user");
     $databaseHandler->set_column_types("INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY");
-    $databaseHandler->set_column_types("VARCHAR(1000) NOT NULL");
-    $databaseHandler->set_column_types("VARCHAR(1000) NOT NULL");
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
 
-    $databaseHandler->set_column_types("VARCHAR(1000) NOT NULL");
-    $databaseHandler->set_column_types("VARCHAR(1000) NOT NULL");
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
 
-    $databaseHandler->set_column_types("VARCHAR(1000) NOT NULL");
-    $databaseHandler->set_column_types("VARCHAR(1000) NOT NULL");
-    $databaseHandler->set_column_types("VARCHAR(1000) NOT NULL");
-    $databaseHandler->set_column_types("VARCHAR(1000) NOT NULL");
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
 
 
 
-    $databaseHandler->set_column_types("VARCHAR(1000) NOT NULL");
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
     $databaseHandler->set_column_types("TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP");
     $databaseHandler->add_table($config_dbname);
     $config_password_ = sha1($config_password_) ; 
@@ -109,25 +109,25 @@ if($databaseHandler->verif==1){
 
     $databaseHandler->set_column_types("INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY");
  
-    $databaseHandler->set_column_types("VARCHAR(1000) NOT NULL");
-    $databaseHandler->set_column_types("VARCHAR(1000) NOT NULL");
-    $databaseHandler->set_column_types("VARCHAR(1000) NOT NULL");
-    $databaseHandler->set_column_types("VARCHAR(1000) NOT NULL");
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
 
-    $databaseHandler->set_column_types("VARCHAR(1000) NOT NULL");
-
-
-
-    $databaseHandler->set_column_types("VARCHAR(1000) NOT NULL");
-
-    $databaseHandler->set_column_types("VARCHAR(1000) NOT NULL");
-    $databaseHandler->set_column_types("VARCHAR(1000) NOT NULL");
-    $databaseHandler->set_column_types("VARCHAR(1000) NOT NULL");
-    $databaseHandler->set_column_types("VARCHAR(1000) NOT NULL");
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
 
 
 
-    $databaseHandler->set_column_types("VARCHAR(1000)");
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
+
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
+
+
+
+    $databaseHandler->set_column_types("LONGTEXT");
     $databaseHandler->set_column_types("TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP");
     $databaseHandler->add_table("projet");
  
@@ -172,27 +172,27 @@ if($databaseHandler->verif==1){
 
     $databaseHandler->set_column_types("INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY");
  
-    $databaseHandler->set_column_types("VARCHAR(1000) NOT NULL");
-    $databaseHandler->set_column_types("VARCHAR(1000) NOT NULL");
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
 
-    $databaseHandler->set_column_types("VARCHAR(1000) NOT NULL");
-    $databaseHandler->set_column_types("VARCHAR(1000) NOT NULL");
-    $databaseHandler->set_column_types("VARCHAR(1000) NOT NULL");
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
 
-    $databaseHandler->set_column_types("VARCHAR(1000) NOT NULL");
-
-
-
-    $databaseHandler->set_column_types("VARCHAR(1000) NOT NULL");
-
-    $databaseHandler->set_column_types("VARCHAR(1000) NOT NULL");
-    $databaseHandler->set_column_types("VARCHAR(1000) NOT NULL");
-    $databaseHandler->set_column_types("VARCHAR(1000) NOT NULL");
-    $databaseHandler->set_column_types("VARCHAR(1000) NOT NULL");
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
 
 
 
-    $databaseHandler->set_column_types("VARCHAR(1000)");
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
+
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
+
+
+
+    $databaseHandler->set_column_types("LONGTEXT");
     $databaseHandler->set_column_types("TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP");
     $databaseHandler->add_table("projet_child");
  

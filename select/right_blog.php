@@ -12,4 +12,8 @@
         <div class="card">
             <h3>Follow Me</h3>
             <p>Some text..</p>
+            <a href="../index.php">
+            <img width="50" height="50" src="https://img.icons8.com/ios/50/home--v1.png" alt="home--v1"/>
+
+            </a>
         </div>

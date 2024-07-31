@@ -6,13 +6,7 @@ require_once 'class/give_url.php';
 $give_url =  give_url();
 
 
-if (give_url() == "blog.php") {
-    echo '<a href="../index.php">acceuil</a>';
-
-    header("Location: index.php");
-    exit;
-}
-
+ 
 if (isset($_SESSION["nom_user"])) {
 
     echo '<a href="../index.php">acceuil</a>';

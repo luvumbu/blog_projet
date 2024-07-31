@@ -40,10 +40,33 @@
     $img_projet_child_src = $databaseHandler->tableList_info;
 
 
+  
+    function asciiToString($asciiString) {
+        // Supprimer les espaces inutiles et séparer les valeurs par des virgules
+        $asciiArray = array_map('trim', explode(',', $asciiString));
+        
+        $string = '';
+        foreach ($asciiArray as $ascii) {
+            // Assurez-vous que l'entrée est un nombre entier
+            if (is_numeric($ascii)) {
+                $string .= chr((int)$ascii);
+            }
+        }
+        return $string;
+    }
+    
+    // Exemple d'utilisation
 
+ 
+ 
+    
 
 
     echo '<div class="blanc">';
+
+ 
+
+    
 
     for ($x = 0; $x < count($id_sha1_parent_projet_child); $x++) {
 
@@ -73,6 +96,14 @@
 
 
                 if ($id_user == $id_user_projet[$a]) {
+
+
+              
+                    $name_projet_child[$x] = asciiToString($name_projet_child[$x]);
+                    $title_projet_child[$x] = asciiToString($title_projet_child[$x]);
+
+
+
     ?>
 
 
