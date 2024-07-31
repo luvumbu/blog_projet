@@ -62,13 +62,17 @@ function asciiToString($asciiString) {
 }
 
 
-
 $somme =  count($databaseHandler->tableList_info);
 
  
 
-
 for ($a = 0; $a < $somme; $a++) {
+
+ 
+$name_projet[$a] = asciiToString($name_projet[$a]);
+$title_projet[$a]  = asciiToString($title_projet[$a]);
+ 
+
 ?>
 
 

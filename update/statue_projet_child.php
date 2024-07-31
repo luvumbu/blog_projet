@@ -14,6 +14,8 @@ require_once '../class/databaseHandler.php' ;
 require_once '../class/config.php' ; 
 
 
+
+
  
 $databaseHandler = new DatabaseHandler($config_dbname, $config_password);
 

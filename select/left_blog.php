@@ -61,10 +61,30 @@ $databaseHandler = new DatabaseHandler($config_dbname, $config_password);
 $databaseHandler->getDataFromTable($req_sql, "id_sha1_projet");
 $id_sha1_projet = $databaseHandler->tableList_info;
 
+  
+ 
 
+ 
+function asciiToString__($asciiString) {
+    // Supprimer les espaces inutiles et séparer les valeurs par des virgules
+    $asciiArray = array_map('trim', explode(',', $asciiString));
+    
+    $string = '';
+    foreach ($asciiArray as $ascii) {
+        // Assurez-vous que l'entrée est un nombre entier
+        if (is_numeric($ascii)) {
+            $string .= chr((int)$ascii);
+        }
+    }
+    return $string;
+}
 
+// Exemple d'utilisation
+ 
 
-
+ 
+ 
+ 
 
 
 $somme =  count($databaseHandler->tableList_info);
@@ -72,6 +92,12 @@ $somme =  count($databaseHandler->tableList_info);
 
 
 for ($a = 0; $a < $somme; $a++) {
+
+
+    $name_projet[$a] = asciiToString__($name_projet[$a]);
+    $title_projet[$a] = asciiToString__($title_projet[$a]);
+ 
+    
 ?>
 
 
