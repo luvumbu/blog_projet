@@ -8,6 +8,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>blog_projet</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="icon" type="image/x-icon" href="../../src_/uploads/1/1722457830590.jpg">
 </head>
 
 <body>
