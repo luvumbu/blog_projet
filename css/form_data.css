@@ -1,0 +1,28 @@
+#form{
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    margin-top : 50px; 
+
+}
+#form input, #form_send{
+   width: 100%;
+   padding: 8px ;
+    
+}
+#form_send {
+    background-color: black; 
+    color:white ; 
+}
+#form_send:hover {
+            cursor: pointer;
+            opacity: 0.5;
+}
+input{
+    margin-bottom: 10px;
+}
+.text_align{
+    text-align: center;
+}
+
+

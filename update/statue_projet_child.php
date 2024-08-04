@@ -19,7 +19,7 @@ require_once '../class/config.php' ;
  
 $databaseHandler = new DatabaseHandler($config_dbname, $config_password);
 
-$sql_req = "UPDATE `root`.`projet_child` SET `statue_projet_child` = '".$statue_projet_child."' WHERE  `id_projet_child` = '".$id_projet_child."';";
+$sql_req = "UPDATE  `projet_child` SET `statue_projet_child` = '".$statue_projet_child."' WHERE  `id_projet_child` = '".$id_projet_child."';";
 
  
 $databaseHandler->action_sql($sql_req) ;
