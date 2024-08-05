@@ -1,3 +1,4 @@
+ 
 <div style="display: flex;justify-content:space-around" class="login">
     <div style="background-color:white" class="login_" onclick="options(this)"><img width="50" height="50" src="https://img.icons8.com/ios/50/plus--v1.png" alt="plus--v1" />
     </div>
@@ -59,41 +60,7 @@ echo "<br/>" ;
 */
 
 ?>
-<style>
-    #section {
-        display: flex;
-        justify-content: space-between;
-    }
 
-    .login {
-        color: white;
-    }
-
-    .login div {}
-
-    .login div:hover {
-        background-color: white;
-        color: black;
-        cursor: pointer;
-    }
-
-    .login_ {
-
-        padding: 25px;
-
-    }
-
-    .login {
-
-        background-color: black;
-
-    }
-
-    body {
-        margin: 0;
-        padding: 0;
-    }
-</style>
 
 
 <script>
@@ -116,3 +83,8 @@ function relod() {
 
     }
 </script>
+
+
+<style>
+    
+</style>
