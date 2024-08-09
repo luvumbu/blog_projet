@@ -74,8 +74,30 @@ for ($a = 0; $a < $somme; $a++) {
   $title_projet[$a]  = asciiToString($title_projet[$a]);
 
 
+echo '<div class="img_projet">' ; 
+
+  if($img_projet_src[$a]!=""){
+    echo "/!" ; 
+    ?>
+
+<img src="<?php echo 'src_/'.$img_projet_src[$a]  ?>" alt="" srcset="">
+<?php 
+  }
+  else {
+?>
+<div  class="<?php echo $id_user ?>" onclick="img_projet_src(this)" title="<?php echo $id_projet[$a]  ?>">
+  <img src="https://i.pinimg.com/736x/29/2d/d6/292dd606189909ca183ecbf01fe3c497.jpg" alt="" srcset="">
+</div>
+<?php 
+  }
+
+
+ 
+
 ?>
 
+
+</div>
   <div class="left_boucle">
     <input type="text" onkeyup="left_action(this)" title="<?php echo $id_projet[$a] ?>" id="<?php echo $id_projet[$a] . "_name_projet" ?>" title="name_projet" placeholder="TITLE HEADING" value="<?php echo  $name_projet[$a] ?>"></h2>
     <textarea name="" onkeyup="left_action(this)" title="<?php echo $id_projet[$a] ?>" id="<?php echo $id_projet[$a] . "_title_projet" ?>" placeholder="Title description, Dec 7, 2017"><?php echo  $title_projet[$a] ?></textarea>
@@ -354,4 +376,51 @@ var x_verif = false ;
     display: flex;
   justify-content: space-around;
   }
+  .img_projet {
+    background-color: black;
+    text-align: center;
+    
+  }
+
+  .img_projet img{
+    background-color: black;
+    text-align: center;
+    max-width: 200px;
+  }
 </style>
+
+
+<script>
+
+  function img_projet_src(_this) {
+
+ 
+  console.log(_this.title) ;  
+  console.log(_this.className) ; 
+
+    var ok = new Information("cookie/add_img_projet.php"); // création de la classe 
+
+ok.add("id_projet", _this.title); // ajout de l'information pour lenvoi 
+ok.add("id_user_projet", _this.className); // ajout de l'information pour lenvoi 
+
+
+
+
+
+console.log(ok.info()); // demande l'information dans le tableau
+ok.push(); // 
+
+
+
+const myTimeout = setTimeout(xx, 250);
+
+function xx() {
+   window.location.href = "src_/index.php";
+
+}
+
+
+
+
+  }
+</script>

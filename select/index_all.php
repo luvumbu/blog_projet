@@ -2,7 +2,7 @@
 
 
 
- 
+
 $req_sql  = "SELECT * FROM `projet` WHERE 1  ";
 $databaseHandler = new DatabaseHandler($config_dbname, $config_password);
 $databaseHandler->getDataFromTable($req_sql, "id_projet");
@@ -43,7 +43,7 @@ $img_projet_src = $databaseHandler->tableList_info;
 $databaseHandler = new DatabaseHandler($config_dbname, $config_password);
 $databaseHandler->getDataFromTable($req_sql, "id_sha1_projet");
 $id_sha1_projet = $databaseHandler->tableList_info;
- 
+
 
 
 function asciiToString($asciiString)
@@ -74,20 +74,22 @@ for ($a = 0; $a < $somme; $a++) {
 
 
 
-  echo  '<h1 class="h1_style_01" title="'.$title_projet[$a].'">'.$name_projet[$a].'</h1>' ; 
+  echo  '<h1 class="h1_style_01" title="' . $title_projet[$a] . '">' . $name_projet[$a] . '</h1>';
 
 
-  echo  '<p>'.$description_projet[$a].'</p>' ;
+  echo  '<p>' . $description_projet[$a] . '</p>';
 
- ?>
- 
- 
-
-
-
+?>
+  <div class="img_projet_src">
+    <img src="<?php echo 'src_/' . $img_projet_src[$a] ?>" alt="">
+  </div>
 
 
- 
+
+
+
+
+
   </div>
 
 
@@ -305,8 +307,8 @@ var x_verif = false ;
 
   .left_boucle {
 
-  margin-bottom: 50px;
-  margin-top: 50px;
+    margin-bottom: 50px;
+    margin-top: 50px;
 
   }
 
@@ -326,26 +328,40 @@ var x_verif = false ;
   }
 
   .left_boucle textarea {
- 
+
     height: 250px;
     margin: auto;
   }
-  .left_option_parent{
-   
+
+  .left_option_parent {
+
     display: flex;
-  justify-content: space-around;
+    justify-content: space-around;
   }
-  .h1_style_01{
+
+  .h1_style_01 {
     text-align: center;
     background-color: black;
     color: white;
     margin: 0;
     padding: 0;
     text-shadow: 1px 1px red;
- 
+
   }
-  body{
+
+  body {
     margin: 0;
     padding: 0;
   }
+
+
+  .img_projet_src img{
+max-width: 200px;
+  }
+  
+  .img_projet_src {
+background-color: black;
+text-align: center;
+  }
+
 </style>
