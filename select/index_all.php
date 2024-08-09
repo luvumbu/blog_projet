@@ -2,8 +2,8 @@
 
 
 
-$id_user = $_SESSION["id_user"];
-$req_sql  = "SELECT * FROM `projet` WHERE `id_user_projet`='$id_user' AND `statue_projet` !='display_none' ORDER BY `projet`.`id_projet` DESC ";
+ 
+$req_sql  = "SELECT * FROM `projet` WHERE 1  ";
 $databaseHandler = new DatabaseHandler($config_dbname, $config_password);
 $databaseHandler->getDataFromTable($req_sql, "id_projet");
 $id_projet = $databaseHandler->tableList_info;
@@ -43,8 +43,7 @@ $img_projet_src = $databaseHandler->tableList_info;
 $databaseHandler = new DatabaseHandler($config_dbname, $config_password);
 $databaseHandler->getDataFromTable($req_sql, "id_sha1_projet");
 $id_sha1_projet = $databaseHandler->tableList_info;
-
-
+ 
 
 
 function asciiToString($asciiString)
@@ -74,39 +73,21 @@ for ($a = 0; $a < $somme; $a++) {
   $title_projet[$a]  = asciiToString($title_projet[$a]);
 
 
-?>
 
-  <div class="left_boucle">
-    <input type="text" onkeyup="left_action(this)" title="<?php echo $id_projet[$a] ?>" id="<?php echo $id_projet[$a] . "_name_projet" ?>" title="name_projet" placeholder="TITLE HEADING" value="<?php echo  $name_projet[$a] ?>"></h2>
-    <textarea name="" onkeyup="left_action(this)" title="<?php echo $id_projet[$a] ?>" id="<?php echo $id_projet[$a] . "_title_projet" ?>" placeholder="Title description, Dec 7, 2017"><?php echo  $title_projet[$a] ?></textarea>
+  echo  '<h1 class="h1_style_01" title="'.$title_projet[$a].'">'.$name_projet[$a].'</h1>' ; 
 
 
+  echo  '<p>'.$description_projet[$a].'</p>' ;
 
-
-
-
-
-    <div class="left_option_parent">
-
-    <div class="display_none" onclick="display_none(this)" title="<?php echo $id_projet[$a] ?>" id="<?php echo "display_none_" . $id_projet[$a] ?>">
-      <img width="50" height="50" src="https://img.icons8.com/color/50/delete-forever.png" alt="delete-forever" />
-    </div>
+ ?>
+ 
+ 
 
 
 
 
 
-      <div onclick="left_opntion(this)" class="left_option" title="<?php echo  $id_projet[$a] ?>">
-        <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/delete-forever.png" alt="delete-forever" />
-
-      </div>
-
-      <a href="<?php echo 'blog.php/' . $id_projet[$a] ?>">
-        <div class="left_option" title="<?php echo  $id_projet[$a] ?>">
-          <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/settings.png" alt="settings" />
-        </div>
-      </a>
-    </div>
+ 
   </div>
 
 
@@ -353,5 +334,18 @@ var x_verif = false ;
    
     display: flex;
   justify-content: space-around;
+  }
+  .h1_style_01{
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-shadow: 1px 1px red;
+ 
+  }
+  body{
+    margin: 0;
+    padding: 0;
   }
 </style>

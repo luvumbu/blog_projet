@@ -27,14 +27,19 @@ require_once 'class/verif_filename.php';
     <div class="row">
         <div class="leftcolumn">
             <?php
+ 
+           //require_once 'select/left_blog.php';
+             //require_once 'select/left_on.php';
 
-            require_once 'select/left_blog.php';
+             require_once 'select/left_log_on.php';
+
+
             ?>
         </div>
         <div class="rightcolumn">
             <?php
 
-            require_once 'select/right_blog.php';
+     require_once 'select/right_log_on.php';
             ?>
         </div>
     </div>

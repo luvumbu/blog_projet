@@ -106,77 +106,14 @@ for ($a = 0; $a < $somme; $a++) {
 
         <?php
 
-        } else {
-        ?>
-            <h2 title="<?php echo  $title_projet[$a] ?>"><?php echo  $name_projet[$a] ?></h2>
-
-        <?php
+        } 
+        else {
+            echo '??'  ; 
         }
 
         ?>
-
-        <?php
-
-        if ($id_user == $id_user_projet[$a]) {
-
-        ?>
-
-
-
-
-
-
-
-            <?php
-            /*
-
-            <div style="margin-top:20px">
-
-                <input class="margin_styl_1" type="text" style="border-bottom:1px solid black;width:80%">
-               
-                <select class="form-select" aria-label="Default select example">
-  <option value="h1">h1</option>
-  <option value="h2">h2</option>
-  <option value="h3">h3</option>
-  <option value="h4">h4</option>
-  <option value="h5">h5</option>
-  <option value="p">p</option>
-
-
-</select>
-                <br />
-                <input class="margin_styl_1" type="text" style="border-bottom:1px solid rgba(0,0,0,0.4);width:80%">
-                <br />
-
-                <img class="margin_styl_1" width="25" height="25" src="https://img.icons8.com/color/25/delete-forever.png" alt="delete-forever" />
-            </div>
 
   
-
-            <div style="margin-top:20px">
-                <div>
-                    <img width="50" height="50" src="https://img.icons8.com/ios/50/image-file.png" alt="image-file" />
-
-                </div>
-                <img class="margin_styl_1" width="25" height="25" src="https://img.icons8.com/color/25/delete-forever.png" alt="delete-forever" />
-            </div>
-
-  */
-            ?>
-
-
-
-
-
-
-
-        <?php
-
-
-        }
-
-        ?>
-
 
 
 

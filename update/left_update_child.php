@@ -9,6 +9,8 @@ header("Access-Control-Allow-Origin: *");
 $id_projet_child =  $_POST["id_projet_child"] ;
 $title_projet_child =  $_POST["title_projet_child"] ;
  $name_projet_child =  $_POST["name_projet_child"] ;
+ //$name_projet_child =  "123456789" ;
+
  
 require_once '../class/databaseHandler.php' ; 
 require_once '../class/config.php' ; 

@@ -1,8 +1,14 @@
-<div id="informarion_"></div>
+<div id="informarion_" class="text_center"></div>
 <div id="form">
-        <input type="text" id="config_dbname">
-        <input type="text" id="config_password">
-        <div id="form_send" title="form_data_1">Envoyer</div>
+        <div class="spatio_">
+        Entrez votre adresse mail
+</div>
+        <input type="text" class="input_style1" id="config_dbname">
+        <div class="spatio_">
+        Entrez votre mot de passe
+</div>
+        <input type="text" class="input_style1" id="config_password">
+        <div id="form_send" title="form_data_1" class="btn_black"   >Envoyer</div>
 </div>
  
  
@@ -27,10 +33,10 @@
 
 
            var form_send = new Atribute("config_dbname");
-           form_send.exe_atribute("style","margin-top:5px;border-radius:5px;border:1px solid rgba(0,0,0,0.1");
+           form_send.exe_atribute("style","color:white;margin-top:5px;border-radius:5px;border:1px solid rgba(0,0,0,0.1);color:white");
            form_send.exe_atribute("placeholder","Login");
            var form_send = new Atribute("config_password");
-           form_send.exe_atribute("style","margin-top:5px;border-radius:5px;border:1px solid rgba(0,0,0,0.1");
+           form_send.exe_atribute("style","margin-top:5px;border-radius:5px;border:1px solid rgba(0,0,0,0.1);color:white");
            form_send.exe_atribute("placeholder","mot de passe");
        
 </script>
@@ -56,7 +62,7 @@ if($verif_data ==1){
         <script>  
         var form_send = new Atribute("form_send");
         form_send.exe_atribute("title","form_data_2");
-        form_send.exe_atribute("style","background-color:#584e80;");
+        form_send.exe_atribute("style","background-color:#584e80;color:white;text-align:center");
        var Connexion =  document.getElementById("informarion_") ; 
        Connexion.innerHTML =  "Connexion et Inscription" ;
        Connexion.setAttribute("class","text_align") ; 
@@ -67,4 +73,4 @@ if($verif_data ==1){
 
     ?>
 
-
+ 
