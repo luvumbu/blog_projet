@@ -44,6 +44,10 @@ $databaseHandler = new DatabaseHandler($config_dbname, $config_password);
 $databaseHandler->getDataFromTable($req_sql, "id_sha1_projet");
 $id_sha1_projet = $databaseHandler->tableList_info;
 
+$databaseHandler = new DatabaseHandler($config_dbname, $config_password);
+$databaseHandler->getDataFromTable($req_sql, "date_inscription_projet");
+$date_inscription_projet = $databaseHandler->tableList_info;
+
 
 
 function asciiToString($asciiString)
@@ -64,11 +68,22 @@ function asciiToString($asciiString)
 
 $somme =  count($databaseHandler->tableList_info);
 
+?>
 
+<div class="row">
+<div class="leftcolumn">
+<?php 
 
 for ($a = 0; $a < $somme; $a++) {
 
+?>
+  
+    <div class="card">
+ 
+ 
 
+ 
+<?php 
   $name_projet[$a] = asciiToString($name_projet[$a]);
   $title_projet[$a]  = asciiToString($title_projet[$a]);
 
@@ -76,15 +91,12 @@ for ($a = 0; $a < $somme; $a++) {
 
   echo  '<h1 class="h1_style_01" title="' . $title_projet[$a] . '">' . $name_projet[$a] . '</h1>';
 
+
 echo '<p class="id_projet_">'. $id_projet[$a].'</p>' ; 
 
 ?>
 
-<p class="id_projet_">
 
-
-<a  class="id_projet_" href="<?php echo 'blog.php/'.$id_projet[$a] ?>">Voir projer</a>
-</p>
 <?php
   echo  '<p>' . $description_projet[$a] . '</p>';
 
@@ -97,12 +109,33 @@ echo '<p class="id_projet_">'. $id_projet[$a].'</p>' ;
   </div>
 
 
+<?php 
+
+echo  '<p class="description__">descrption' . $title_projet[$a] . '</p>';
+?>
+
+<p class="description__ id_projet_ black_fon">
+
+
+<a  class="id_projet_" href="<?php echo 'blog.php/'.$id_projet[$a] ?>">Voir projet</a>
+</p>
+
+<p class="description__ date_inscription_projet">
+<?php 
+$apple = new Get_anne($date_inscription_projet[$a]);
+echo  $apple-> get_jour() ;
+echo "/" ;  
+echo  $apple-> get_mois() ;
+echo "/" ;  
+echo  $apple-> get_anne() ; 
 
 
 
 
-
+?>
   </div>
+</p>
+
 
 
 <?php
@@ -131,14 +164,33 @@ echo '<p class="id_projet_">'. $id_projet[$a].'</p>' ;
 
 
   */
-}
+ 
+
+
+}  echo '</div>' ; 
 /*
 if(isset($_SESSION["options"])){
     echo $_SESSION["_this_innerHTML"] ; 
 }
     */
 ?>
-
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+      <div class="fakeimg" style="height:100px;">Image</div>
+      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    </div>
+    <div class="card">
+      <h3>Popular Post</h3>
+      <div class="fakeimg">Image</div><br>
+      <div class="fakeimg">Image</div><br>
+      <div class="fakeimg">Image</div>
+    </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <p>Some text..</p>
+    </div>
+  </div>
 <!--
     <div class="card">
       <h2>TITLE HEADING</h2>
@@ -354,10 +406,10 @@ var x_verif = false ;
   .h1_style_01 {
     text-align: center;
    
-    color: white;
+    
     margin: 0;
     padding: 0;
-    text-shadow: 1px 1px red;
+    
 
   }
 
@@ -378,4 +430,125 @@ var x_verif = false ;
   .id_projet_{
     text-align: center;
   }
+  .description__ {
+    width: 60%;
+    margin: auto;
+    text-align: justify;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .black_fon{
+    background-color: black;
+    width : 200px ; 
+    text-align: center;
+    color: white; 
+    
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .black_fon a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+  }
+  .date_inscription_projet{
+    opacity: 0.3;
+  }
 </style>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+</style>
+
+
+ 
+</div>
+
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+
+
+<style>
+  @media screen and (max-width: 1024px) {
+ .description__{
+  width: 90%;
+ }
+}
+</style>
+</body>
+</html>
+ 

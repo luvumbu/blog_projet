@@ -64,7 +64,7 @@ if($verif_data ==1){
         form_send.exe_atribute("title","form_data_2");
         form_send.exe_atribute("style","background-color:#584e80;color:white;text-align:center");
        var Connexion =  document.getElementById("informarion_") ; 
-       Connexion.innerHTML =  "Connexion et Inscription" ;
+     
        Connexion.setAttribute("class","text_align") ; 
 
        </script>

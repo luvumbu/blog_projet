@@ -22,6 +22,9 @@ session_start();
     require_once 'class/filename.php';
     require_once 'class/databaseHandler.php';
     require_once 'class/verif_filename.php';
+    require_once 'class/Get_anne.php';
+
+    
     // toute cette partie ferifie le bon fonctionnement de l'application class/verif_filename.php
     if (isset($_SESSION["nom_user"])) {
         require_once "select/login.php";
