@@ -76,10 +76,22 @@ for ($a = 0; $a < $somme; $a++) {
 
   echo  '<h1 class="h1_style_01" title="' . $title_projet[$a] . '">' . $name_projet[$a] . '</h1>';
 
-
-  echo  '<p>' . $description_projet[$a] . '</p>';
+echo '<p class="id_projet_">'. $id_projet[$a].'</p>' ; 
 
 ?>
+
+<p class="id_projet_">
+
+
+<a  class="id_projet_" href="<?php echo 'blog.php/'.$id_projet[$a] ?>">Voir projer</a>
+</p>
+<?php
+  echo  '<p>' . $description_projet[$a] . '</p>';
+
+
+
+?>
+
   <div class="img_projet_src">
     <img src="<?php echo 'src_/' . $img_projet_src[$a] ?>" alt="">
   </div>
@@ -341,7 +353,7 @@ var x_verif = false ;
 
   .h1_style_01 {
     text-align: center;
-    background-color: black;
+   
     color: white;
     margin: 0;
     padding: 0;
@@ -355,13 +367,15 @@ var x_verif = false ;
   }
 
 
-  .img_projet_src img{
-max-width: 200px;
-  }
-  
-  .img_projet_src {
-background-color: black;
-text-align: center;
+  .img_projet_src img {
+    max-width: 200px;
   }
 
+  .img_projet_src {
+     
+    text-align: center;
+  }
+  .id_projet_{
+    text-align: center;
+  }
 </style>

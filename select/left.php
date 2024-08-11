@@ -74,30 +74,30 @@ for ($a = 0; $a < $somme; $a++) {
   $title_projet[$a]  = asciiToString($title_projet[$a]);
 
 
-echo '<div class="img_projet">' ; 
+  echo '<div class="img_projet">';
 
-  if($img_projet_src[$a]!=""){
-    echo "/!" ; 
-    ?>
-
-<img src="<?php echo 'src_/'.$img_projet_src[$a]  ?>" alt="" srcset="">
-<?php 
-  }
-  else {
+  if ($img_projet_src[$a] != "") {
+    echo "/!";
 ?>
-<div  class="<?php echo $id_user ?>" onclick="img_projet_src(this)" title="<?php echo $id_projet[$a]  ?>">
-  <img src="https://i.pinimg.com/736x/29/2d/d6/292dd606189909ca183ecbf01fe3c497.jpg" alt="" srcset="">
-</div>
-<?php 
+    <div class="<?php echo $id_user ?>" onclick="img_projet_src(this)" title="<?php echo $id_projet[$a]  ?>">
+      <img src="<?php echo 'src_/' . $img_projet_src[$a]  ?>" alt="" srcset="">
+    </div>
+  <?php
+  } else {
+  ?>
+    <div class="<?php echo $id_user ?>" onclick="img_projet_src(this)" title="<?php echo $id_projet[$a]  ?>">
+      <img src="https://i.pinimg.com/736x/29/2d/d6/292dd606189909ca183ecbf01fe3c497.jpg" alt="" srcset="">
+    </div>
+  <?php
   }
 
 
- 
-
-?>
 
 
-</div>
+  ?>
+
+
+  </div>
   <div class="left_boucle">
     <input type="text" onkeyup="left_action(this)" title="<?php echo $id_projet[$a] ?>" id="<?php echo $id_projet[$a] . "_name_projet" ?>" title="name_projet" placeholder="TITLE HEADING" value="<?php echo  $name_projet[$a] ?>"></h2>
     <textarea name="" onkeyup="left_action(this)" title="<?php echo $id_projet[$a] ?>" id="<?php echo $id_projet[$a] . "_title_projet" ?>" placeholder="Title description, Dec 7, 2017"><?php echo  $title_projet[$a] ?></textarea>
@@ -110,9 +110,9 @@ echo '<div class="img_projet">' ;
 
     <div class="left_option_parent">
 
-    <div class="display_none" onclick="display_none(this)" title="<?php echo $id_projet[$a] ?>" id="<?php echo "display_none_" . $id_projet[$a] ?>">
-      <img width="50" height="50" src="https://img.icons8.com/color/50/delete-forever.png" alt="delete-forever" />
-    </div>
+      <div class="display_none" onclick="display_none(this)" title="<?php echo $id_projet[$a] ?>" id="<?php echo "display_none_" . $id_projet[$a] ?>">
+        <img width="50" height="50" src="https://img.icons8.com/color/50/delete-forever.png" alt="delete-forever" />
+      </div>
 
 
 
@@ -346,8 +346,8 @@ var x_verif = false ;
 
   .left_boucle {
 
-  margin-bottom: 50px;
-  margin-top: 50px;
+    margin-bottom: 50px;
+    margin-top: 50px;
 
   }
 
@@ -367,23 +367,25 @@ var x_verif = false ;
   }
 
   .left_boucle textarea {
- 
+
     height: 250px;
     margin: auto;
   }
-  .left_option_parent{
-   
+
+  .left_option_parent {
+
     display: flex;
-  justify-content: space-around;
-  }
-  .img_projet {
-    background-color: black;
-    text-align: center;
-    
+    justify-content: space-around;
   }
 
-  .img_projet img{
-    background-color: black;
+  .img_projet {
+    
+    text-align: center;
+
+  }
+
+  .img_projet img {
+   
     text-align: center;
     max-width: 200px;
   }
@@ -391,33 +393,32 @@ var x_verif = false ;
 
 
 <script>
-
   function img_projet_src(_this) {
 
- 
-  console.log(_this.title) ;  
-  console.log(_this.className) ; 
+
+    console.log(_this.title);
+    console.log(_this.className);
 
     var ok = new Information("cookie/add_img_projet.php"); // création de la classe 
 
-ok.add("id_projet", _this.title); // ajout de l'information pour lenvoi 
-ok.add("id_user_projet", _this.className); // ajout de l'information pour lenvoi 
+    ok.add("id_projet", _this.title); // ajout de l'information pour lenvoi 
+    ok.add("id_user_projet", _this.className); // ajout de l'information pour lenvoi 
 
 
 
 
 
-console.log(ok.info()); // demande l'information dans le tableau
-ok.push(); // 
+    console.log(ok.info()); // demande l'information dans le tableau
+    ok.push(); // 
 
 
 
-const myTimeout = setTimeout(xx, 250);
+    const myTimeout = setTimeout(xx, 250);
 
-function xx() {
-   window.location.href = "src_/index.php";
+    function xx() {
+      window.location.href = "src_/index.php";
 
-}
+    }
 
 
 

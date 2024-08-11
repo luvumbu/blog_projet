@@ -94,7 +94,7 @@
             case "h3":
             case "h4":
             case "p":
-
+ 
                 $name_projet_child[$x] = asciiToString($name_projet_child[$x]);
                 $title_projet_child[$x] = asciiToString($title_projet_child[$x]);
                 if ($id_user == $id_user_projet[$a]) {
@@ -167,7 +167,13 @@
                 break;
             case "img":
 
+?>
+                     <div class="div_img">
 
+ 
+
+</div>
+<?php 
                 if ($img_projet_child_src[$x] != "") {
 
 
@@ -179,6 +185,8 @@
                          <img src="<?php echo '../src_/' . $img_projet_child_src[$x] ?>" class="<?php echo $id_projet[$a] ?>" onclick="add_img_child(this)" title="<?php echo $id_projet_child[$x]  ?>" alt="" srcset="">
                          <input type="text" class='alt_class' value="<?php echo  $title_projet_child[$x] ?>" title="<?php echo  $id_projet_child[$x] ?>" id="<?php echo  'alt_img' . $id_projet_child[$x] ?>" onkeyup="alt_img(this)" placeholder="ALT IMG ICI">
                      </div>
+
+
                  <?php
 
                     } else {
@@ -191,13 +199,13 @@
                     }
                 } else {
 
-
+ 
                     if ($id_user == $id_user_projet[$a]) {
 
                     ?>
                      <div class="div_img">
 
-                         <img class="<?php echo $id_projet[$a] ?>" onclick="add_img_child(this)" title="<?php echo $id_projet_child[$x]  ?>" src="https://img.freepik.com/photos-gratuite/jeux-olympiques-paris-2024-illustration-concept-image-generee-par-ia_268835-6125.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1722124800&semt=sph" alt="" srcset="">
+                         <img  style="width:100%;height:100%;background-color:red" class="<?php echo $id_projet[$a] ?>" onclick="add_img_child(this)" title="<?php echo $id_projet_child[$x]  ?>" src="https://img.freepik.com/photos-gratuite/jeux-olympiques-paris-2024-illustration-concept-image-generee-par-ia_268835-6125.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1722124800&semt=sph" alt="" srcset="">
 
                          <input type="text" class='alt_class' title="<?php echo  'alt_img' . $title_projet_child[$x] ?>" onkeyup="alt_img(this)" placeholder="ALT IMG ICI">
 
@@ -208,7 +216,7 @@
                     ?>
                      <div class="div_img">
 
-                         <img class="<?php echo $id_projet[$a] ?>" onclick="add_img_child(this)" title="<?php echo $id_projet_child[$x]  ?>" src="https://img.freepik.com/photos-gratuite/jeux-olympiques-paris-2024-illustration-concept-image-generee-par-ia_268835-6125.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1722124800&semt=sph" alt="" srcset="">
+                         <img style="width:100px;height:100px;background-color:red"  class="<?php echo $id_projet[$a] ?>" onclick="add_img_child(this)" title="<?php echo $id_projet_child[$x]  ?>" src="https://img.freepik.com/photos-gratuite/jeux-olympiques-paris-2024-illustration-concept-image-generee-par-ia_268835-6125.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1722124800&semt=sph" alt="" srcset="">
 
 
                      </div>
@@ -568,3 +576,11 @@
     }
 
     ?>
+
+    <style>
+        .div_img{
+            background-color: #584e80;
+            
+        }
+    </style>
+ 

@@ -108,7 +108,16 @@ for ($a = 0; $a < $somme; $a++) {
 
         } 
         else {
-            echo '??'  ; 
+            ?>
+           
+            <h1>
+                 <?php echo  $name_projet[$a] ?>
+            </h1>
+ <p>
+    <?php echo  $title_projet[$a] ?>
+ </p>
+
+        <?php
         }
 
         ?>
