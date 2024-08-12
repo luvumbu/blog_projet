@@ -2,7 +2,7 @@
 session_start();
 
 
- 
+
 
 $id_user__ =  $_SESSION["id_user"];
 
@@ -13,7 +13,7 @@ $id_user__ =  $_SESSION["id_user"];
 
 
 
-$req_sql  = 'SELECT * FROM `projet` WHERE `id_projet` ="'.$give_url.'"';
+$req_sql  = 'SELECT * FROM `projet` WHERE `id_projet` ="' . $give_url . '"';
 
 
 $databaseHandler = new DatabaseHandler($config_dbname, $config_password);
@@ -24,7 +24,7 @@ $id_user_projet = $databaseHandler->tableList_info[0];
 
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-$req_sql  = 'SELECT * FROM `' . $config_dbname . '` WHERE `id_user` ="' .$id_user_projet. '" ';
+$req_sql  = 'SELECT * FROM `' . $config_dbname . '` WHERE `id_user` ="' . $id_user_projet . '" ';
 
 
 $databaseHandler = new DatabaseHandler($config_dbname, $config_password);
@@ -32,7 +32,7 @@ $databaseHandler->getDataFromTable($req_sql, "id_user");
 $id_user = $databaseHandler->tableList_info[0];
 
 
- 
+
 $databaseHandler = new DatabaseHandler($config_dbname, $config_password);
 $databaseHandler->getDataFromTable($req_sql, "id_sha1_user");
 $id_sha1_user = $databaseHandler->tableList_info[0];
@@ -83,45 +83,57 @@ $date_inscription_user = $databaseHandler->tableList_info[0];
 
 
 <div class="card">
+    <a href="../">
+        <img width="50" height="50" src="https://img.icons8.com/ios/50/home--v1.png" alt="home--v1" />
+    </a>
 
- 
-<h1 class="h1_" title="<?php echo $title_user ?>"><?php echo $nom_user ?></h1>
+    <h1 class="h1_" title="<?php echo $title_user ?>"><?php echo $nom_user ?></h1>
     <?php
     if ($img_user == "") {
     ?>
-        <div class="fakeimg" style="height:100px;"  >Image</div>
+        <div class="fakeimg" style="height:100px;">Image</div>
 
 
     <?php
-    }
-    else {
-        ?>
- 
-<img src="<?php echo '../src_/'.$img_user ?>" alt="" srcset="" class="right_img"   >
+    } else {
+    ?>
+
+        <img src="<?php echo '../src_/' . $img_user ?>" alt="" srcset="" class="right_img">
 
 
-<?php
+    <?php
 
 
     }
     ?>
- 
-<p class="p_"><?php echo $description_user ?></p>
+
+    <p class="p_"><?php echo $description_user ?></p>
 
 </div>
 
- 
+
 <div class="card">
     <h3>Popular Post</h3>
     <div class="fakeimg">Image</div><br>
     <div class="fakeimg">Image</div><br>
     <div class="fakeimg">Image</div>
+    <div>
+
+    </div>
 </div>
 <div class="card">
-    <h3>Follow Me</h3>
+
+<?php 
+require_once 'select/social_media.php' ;  
+?>
+    <h3>Follow Me Follow Me</h3>
     <p>Some text..</p>
+    <a href="../">
+        <img width="50" height="50" src="https://img.icons8.com/ios/50/home--v1.png" alt="home--v1" />
+    </a>
+
 </div>
- 
+
 
 <style>
     .input_right {
@@ -179,16 +191,16 @@ $date_inscription_user = $databaseHandler->tableList_info[0];
 
 
 
-            var  nom_user= document.getElementById("input_1_" + _this.title).value;
+            var nom_user = document.getElementById("input_1_" + _this.title).value;
             var title_user = document.getElementById("input_2_" + _this.title).value;
             var description_user = document.getElementById("input_3_" + _this.title).value;
 
- 
 
 
 
 
- 
+
+
 
             var ok = new Information("update/right_user_info.php"); // création de la classe 
 
@@ -200,7 +212,7 @@ $date_inscription_user = $databaseHandler->tableList_info[0];
             console.log(ok.info()); // demande l'information dans le tableau
             ok.push(); // envoie l'information au code pkp 
 
- 
+
         }
 
 
@@ -212,43 +224,45 @@ $date_inscription_user = $databaseHandler->tableList_info[0];
 
     function add_img_child2(_this) {
 
-var ok = new Information("cookie/add_img_child2.php"); // création de la classe 
+        var ok = new Information("cookie/add_img_child2.php"); // création de la classe 
 
 
 
 
-console.log(ok.info()); // demande l'information dans le tableau
-ok.push(); // 
+        console.log(ok.info()); // demande l'information dans le tableau
+        ok.push(); // 
 
 
 
-const myTimeout = setTimeout(xx, 250);
+        const myTimeout = setTimeout(xx, 250);
 
-function xx() {
-    window.location.href = "src_/index.php";
+        function xx() {
+            window.location.href = "src_/index.php";
 
-}
+        }
 
 
 
-}
+    }
 </script>
 
 <style>
-    .right_img{
+    .right_img {
         width: 100%;
         margin-top: 15px;
         margin-bottom: 15px;
 
     }
-    .h1_{
+
+    .h1_ {
         width: 100%;
         background-color: #cabff5;
         text-align: center;
-      
+
         font-size: 1.2em;
     }
-    .p_{
+
+    .p_ {
         text-align: justify;
     }
 </style>

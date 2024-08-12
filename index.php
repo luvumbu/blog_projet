@@ -12,6 +12,7 @@ session_start();
 </head>
 
 <body>
+<link rel="icon" type="image/x-icon" href="https://c8.alamy.com/compfr/g1yxfb/simple-homme-stickman-g1yxfb.jpg">
     <link rel="stylesheet" href="css/css.css">
     <script src="js.js"></script>
     <div id="form_sql_php_info"></div>

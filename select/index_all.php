@@ -431,7 +431,7 @@ var x_verif = false ;
     text-align: center;
   }
   .description__ {
-    width: 60%;
+    width: 90%;
     margin: auto;
     text-align: justify;
     margin-top: 50px;
@@ -543,11 +543,13 @@ body {
 
 
 <style>
+  /*
   @media screen and (max-width: 1024px) {
  .description__{
   width: 90%;
  }
 }
+ */
 </style>
 </body>
 </html>

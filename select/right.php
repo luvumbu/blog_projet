@@ -217,3 +217,4 @@ $date_inscription_user = $databaseHandler->tableList_info[0];
    
    
 </style>
+<img width="100" height="100" src="https://img.icons8.com/ios/100/home--v1.png" alt="home--v1"/>

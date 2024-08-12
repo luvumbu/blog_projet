@@ -290,6 +290,76 @@ if($databaseHandler->verif==1){
     $databaseHandler->set_column_types("LONGTEXT");
     $databaseHandler->set_column_types("TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP");
     $databaseHandler->add_table($config_dbname."_child");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    $databaseHandler = new DatabaseHandler($config_dbname, $config_password); 
+
+
+    $databaseHandler->set_column_names("id_social_media");
+    $databaseHandler->set_column_names("id_user_social_media");
+
+    $databaseHandler->set_column_names("id_sha1_social_media");
+
+    $databaseHandler->set_column_names("name_social_media"); 
+    $databaseHandler->set_column_names("statue_social_media"); 
+
+    $databaseHandler->set_column_names("title_social_media"); 
+    $databaseHandler->set_column_names("description_social_media"); 
+
+
+    $databaseHandler->set_column_names("password_social_media");
+    $databaseHandler->set_column_names("visibility_1_social_media");
+    $databaseHandler->set_column_names("visibility_2_social_media");
+    $databaseHandler->set_column_names("img_projet_src_social_media");
+    $databaseHandler->set_column_names("img_projet_visibility_social_media");
+
+
+
+    $databaseHandler->set_column_names("date_inscription_social_media");
+
+    $databaseHandler->set_column_types("INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY");
+ 
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
+
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
+
+
+
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
+
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
+    $databaseHandler->set_column_types("LONGTEXT NOT NULL");
+
+
+
+    $databaseHandler->set_column_types("LONGTEXT");
+    $databaseHandler->set_column_types("TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP");
+    $databaseHandler->add_table('social_media');
  
     
 
