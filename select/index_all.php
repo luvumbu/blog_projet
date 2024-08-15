@@ -71,7 +71,7 @@ $somme =  count($databaseHandler->tableList_info);
 ?>
 
 <div class="row">
-<div class="leftcolumn">
+ 
 <?php 
 
 for ($a = 0; $a < $somme; $a++) {
@@ -118,7 +118,8 @@ echo  '<p class="description__">descrption' . $title_projet[$a] . '</p>';
 
 
 <a  class="id_projet_" href="<?php echo 'blog.php/'.$id_projet[$a] ?>">Voir projet</a>
-</p>
+
+ 
 
 <p class="description__ date_inscription_projet">
 <?php 
@@ -174,23 +175,7 @@ if(isset($_SESSION["options"])){
 }
     */
 ?>
-  <div class="rightcolumn">
-    <div class="card">
-      <h2>About Me</h2>
-      <div class="fakeimg" style="height:100px;">Image</div>
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-    </div>
-    <div class="card">
-      <h3>Popular Post</h3>
-      <div class="fakeimg">Image</div><br>
-      <div class="fakeimg">Image</div><br>
-      <div class="fakeimg">Image</div>
-    </div>
-    <div class="card">
-      <h3>Follow Me</h3>
-      <p>Some text..</p>
-    </div>
-  </div>
+ 
 <!--
     <div class="card">
       <h2>TITLE HEADING</h2>

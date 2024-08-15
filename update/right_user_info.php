@@ -11,7 +11,7 @@ $title_user =  $_POST["title_user"] ;
 
 //$nom_user =  "nom_user0." ;
 
-$nom_user =  $_POST["nom_user"] ;
+ 
 $description_user =  $_POST["description_user"] ;
 
  
@@ -50,7 +50,7 @@ $name_projet_child =    implode(", ", $name_projet_child);
  
 $databaseHandler = new DatabaseHandler($config_dbname, $config_password);
 
-$sql_req = 'UPDATE `'.$config_dbname.'` SET `description_user` = "'.$description_user.'", `title_user` = "'.$title_user.'", `nom_user` = "'.$nom_user.'" WHERE `id_user` = "'.$id_user.'";';
+$sql_req = 'UPDATE `'.$config_dbname.'` SET `description_user` = "'.$description_user.'", `title_user` = "'.$title_user.'" WHERE `id_user` = "'.$id_user.'";';
 
  
 $databaseHandler->action_sql($sql_req) ;

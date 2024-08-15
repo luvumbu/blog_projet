@@ -3,7 +3,7 @@
         <div class="spatio_">
         Entrez votre adresse mail
 </div>
-        <input type="text" class="input_style1" id="config_dbname">
+        <input type="text" class="input_style1" id="config_dbname" style="color: black;">
         <div class="spatio_">
         Entrez votre mot de passe
 </div>
@@ -33,10 +33,9 @@
 
 
            var form_send = new Atribute("config_dbname");
-           form_send.exe_atribute("style","color:white;margin-top:5px;border-radius:5px;border:1px solid rgba(0,0,0,0.1);color:white");
+           
            form_send.exe_atribute("placeholder","Login");
            var form_send = new Atribute("config_password");
-           form_send.exe_atribute("style","margin-top:5px;border-radius:5px;border:1px solid rgba(0,0,0,0.1);color:white");
            form_send.exe_atribute("placeholder","mot de passe");
        
 </script>
@@ -73,4 +72,22 @@ if($verif_data ==1){
 
     ?>
 
+
+
+<style> 
+        .input_style1{
+          margin-top:5px;border-radius:5px;border:1px solid rgba(0,0,0,0.1);
+       
+                
+        }
  
+        #form{
+        width: 400px;
+        margin: auto;
+        margin-top: 100px;
+        background-color: white;
+        padding: 20px;
+        margin-bottom: 78px;
+    }
+
+</style>

@@ -77,7 +77,7 @@ for ($a = 0; $a < $somme; $a++) {
   echo '<div class="img_projet">';
 
   if ($img_projet_src[$a] != "") {
-    echo "/!";
+   
 ?>
     <div class="<?php echo $id_user ?>" onclick="img_projet_src(this)" title="<?php echo $id_projet[$a]  ?>">
       <img src="<?php echo 'src_/' . $img_projet_src[$a]  ?>" alt="" srcset="">
@@ -99,7 +99,7 @@ for ($a = 0; $a < $somme; $a++) {
 
   </div>
   <div class="left_boucle">
-    <input type="text" onkeyup="left_action(this)" title="<?php echo $id_projet[$a] ?>" id="<?php echo $id_projet[$a] . "_name_projet" ?>" title="name_projet" placeholder="TITLE HEADING" value="<?php echo  $name_projet[$a] ?>"></h2>
+    <input type="text"  onkeyup="left_action(this)" title="<?php echo $id_projet[$a] ?>" id="<?php echo $id_projet[$a] . "_name_projet" ?>" title="name_projet" placeholder="TITLE HEADING" value="<?php echo  $name_projet[$a] ?>"></h2>
     <textarea name="" onkeyup="left_action(this)" title="<?php echo $id_projet[$a] ?>" id="<?php echo $id_projet[$a] . "_title_projet" ?>" placeholder="Title description, Dec 7, 2017"><?php echo  $title_projet[$a] ?></textarea>
 
 
@@ -425,3 +425,5 @@ var x_verif = false ;
 
   }
 </script>
+
+<h1>Identification</h1>

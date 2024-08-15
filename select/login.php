@@ -28,7 +28,7 @@
     </div>
     <div class="rightcolumn">
     <?php
-            require_once 'select/right.php';
+        require_once 'select/right.php';
         ?>
     </div>
 </div>

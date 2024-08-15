@@ -12,8 +12,10 @@ $id_social_media =  $_POST["id_social_media"] ;
 //$nom_user =  "nom_user0." ;
 
 $name_social_media =  $_POST["name_social_media"] ;
+$title_social_media =  $_POST["title_social_media"] ;
+
  
- 
+
 require_once '../class/databaseHandler.php' ; 
 require_once '../class/config.php' ; 
  
@@ -49,7 +51,7 @@ $name_projet_child =    implode(", ", $name_projet_child);
  
 $databaseHandler = new DatabaseHandler($config_dbname, $config_password);
 
-$sql_req = 'UPDATE `social_media` SET `name_social_media` = "'.$name_social_media.'"  WHERE `id_social_media` = "'.$id_social_media.'";';
+$sql_req = 'UPDATE `social_media` SET `name_social_media` = "'.$name_social_media.'",`title_social_media` = "'.$title_social_media.'"  WHERE `id_social_media` = "'.$id_social_media.'";';
 
  
 $databaseHandler->action_sql($sql_req) ;

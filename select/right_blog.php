@@ -85,7 +85,7 @@ $date_inscription_user = $databaseHandler->tableList_info[0];
 <div class="card">
 
  
-<h1 class="h1_" title="<?php echo $title_user ?>"><?php echo $nom_user ?></h1>
+<h1   class="h1_" title="<?php echo $title_user ?>"><?php echo $nom_user ?></h1>
     <?php
     if ($img_user == "") {
     ?>

@@ -66,8 +66,10 @@ $date_inscription_user = $databaseHandler->tableList_info[0];
 
 <div class="card right_info">
 
-    <input onkeyup="input_right(this)" title="<?php echo $id_user__ ?>" id="<?php echo "input_1_" . $id_user__  ?>" type="text" class="input_right" value="<?php echo $nom_user ?>" placeholder="About Me">
+    <input style="width: 50%;margin:auto"  onkeyup="input_right(this)" title="<?php echo $id_user__ ?>" id="<?php echo "input_1_" . $id_user__  ?>" type="text" class="input_right" value="<?php echo $title_user ?>" placeholder="title user">
 
+    <br/>
+    <div class="distance01"></div>
     <?php
     if ($img_user == "") {
     ?>
@@ -78,7 +80,7 @@ $date_inscription_user = $databaseHandler->tableList_info[0];
     } else {
     ?>
 
-        <img src="<?php echo 'src_/' . $img_user ?>" alt="" srcset="" class="right_img" onclick="add_img_child2(this)">
+        <img src="<?php echo 'src_/' . $img_user ?>" alt="" srcset="" class="right_img distance01" onclick="add_img_child2(this)">
 
 
     <?php
@@ -86,8 +88,7 @@ $date_inscription_user = $databaseHandler->tableList_info[0];
 
     }
     ?>
-    <textarea onkeyup="input_right(this)" title="<?php echo $id_user__ ?>" id="<?php echo "input_2_" . $id_user__  ?>" name=""><?php echo $title_user ?></textarea>
-    <textarea onkeyup="input_right(this)" title="<?php echo $id_user__ ?>" id="<?php echo "input_3_" . $id_user__  ?>" name="" style="opacity: 1;"><?php echo $description_user ?></textarea>
+    <textarea  style="margin-bottom:70px" onkeyup="input_right(this)" title="<?php echo $id_user__ ?>" id="<?php echo "input_3_" . $id_user__  ?>" name="" style="opacity: 1;"><?php echo $description_user ?></textarea>
 
 </div>
 
@@ -127,6 +128,7 @@ $date_inscription_user = $databaseHandler->tableList_info[0];
 
             if (envoyer) {
 
+                console.log("simulation") ; 
                 const myTimeout_2 = setTimeout(myGreeting_2, 1000);
             }
 
@@ -142,11 +144,15 @@ $date_inscription_user = $databaseHandler->tableList_info[0];
 
 
 
-            var nom_user = document.getElementById("input_1_" + _this.title).value;
-            var title_user = document.getElementById("input_2_" + _this.title).value;
+            // var nom_user = document.getElementById("input_1_" + _this.title).value;
+       
+       
+
+            var title_user = document.getElementById("input_1_" + _this.title).value;
+  
             var description_user = document.getElementById("input_3_" + _this.title).value;
 
-
+ 
 
 
 
@@ -156,13 +162,13 @@ $date_inscription_user = $databaseHandler->tableList_info[0];
             var ok = new Information("update/right_user_info.php"); // création de la classe 
 
             ok.add("title_user", title_user); // ajout de l'information pour lenvoi 
-            ok.add("nom_user", nom_user); // ajout de l'information pour lenvoi 
+       
             ok.add("description_user", description_user); // ajout de l'information pour lenvoi 
 
 
             console.log(ok.info()); // demande l'information dans le tableau
             ok.push(); // envoie l'information au code pkp 
-
+ 
 
         }
 
@@ -200,9 +206,7 @@ $date_inscription_user = $databaseHandler->tableList_info[0];
 
 
 <style>
-    .right_info {
-         
-    }
+ 
 
     .right_info input,
     .right_info textarea{
@@ -214,7 +218,14 @@ $date_inscription_user = $databaseHandler->tableList_info[0];
         height: 50px;
         background-color: black;
     }
+    .style_input_user{
+        width: 50%;
+        margin: auto;
+    }
    
+    .distance01{
+        margin-bottom: 105px;
+    }
    
 </style>
 <img width="100" height="100" src="https://img.icons8.com/ios/100/home--v1.png" alt="home--v1"/>

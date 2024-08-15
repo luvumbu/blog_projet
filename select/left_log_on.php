@@ -113,6 +113,15 @@ for ($a = 0; $a < $somme; $a++) {
             <h1>
                  <?php echo  $name_projet[$a] ?>
             </h1>
+<?php 
+
+
+ 
+
+?>
+<div class="img_g">
+            <img src="<?php echo '../src_/'.$img_projet_src[$a] ?>" alt="" srcset="">
+</div>
  <p>
     <?php echo  $title_projet[$a] ?>
  </p>
@@ -135,6 +144,9 @@ for ($a = 0; $a < $somme; $a++) {
 
 
     require 'select/left_projet_child.php';
+
+
+ 
 }
 /*
 if(isset($_SESSION["options"])){
@@ -143,6 +155,9 @@ if(isset($_SESSION["options"])){
     */
 ?>
 
+<div class="img_g">
+    <img src="<?php echo '../src_/'.$img_projet_src[$a] ?>" alt="" srcset="">
+</div>
 <!--
     <div class="card">
       <h2>TITLE HEADING</h2>
@@ -156,10 +171,20 @@ if(isset($_SESSION["options"])){
 
 
 <style>
+    .img_g img {
+        width:100%;
+        text-align: center;
+    }
     .margin_top_1 {
         margin-top: 25px;
     }
-
+    .div_img img {
+        width:100%;
+        
+    }
+input{
+    color: black;
+}
     #jo {
         background-image: url("https://img.freepik.com/photos-gratuite/jeux-olympiques-paris-2024-illustration-concept-image-generee-par-ia_268835-6125.jpg");
         height: 250px;
@@ -368,3 +393,4 @@ if(isset($_SESSION["options"])){
 
     }
 </style>
+ 

@@ -24,6 +24,7 @@ session_start();
     require_once 'class/databaseHandler.php';
     require_once 'class/verif_filename.php';
     require_once 'class/Get_anne.php';
+    // liste de tables nessessaice pour un bon fonctionnement 
 
     
     // toute cette partie ferifie le bon fonctionnement de l'application class/verif_filename.php
@@ -48,15 +49,9 @@ session_start();
 </body>
 
 
-<style>
-    #form{
-        width: 400px;
-        margin: auto;
-        margin-top: 100px;
-        background-color: white;
-        padding: 20px;
-        margin-bottom: 78px;
-    }
+<style>/*
+
+        */
    .spatio_{
  
   margin-bottom: 10px;
@@ -81,6 +76,9 @@ padding: 7px;
     }
     body{
         background-color: #f1f1f1;
+    }
+    .footer{
+        display: none;
     }
 </style>
 
